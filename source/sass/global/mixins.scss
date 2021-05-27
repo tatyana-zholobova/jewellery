@@ -1,0 +1,27 @@
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+@mixin reset-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
