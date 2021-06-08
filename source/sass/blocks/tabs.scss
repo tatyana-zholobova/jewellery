@@ -1,0 +1,39 @@
+.tabs__list {
+  @include reset-list;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: grey;
+
+  &--active {
+    color: $dark;
+  }
+
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.tabs__item button {
+  padding: 0;
+  display: block;
+  color: inherit;
+  font-weight: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

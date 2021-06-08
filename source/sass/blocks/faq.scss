@@ -1,0 +1,144 @@
+.faq {
+  padding-top: 120px;
+}
+
+.faq h2 {
+  margin-bottom: 50px;
+  letter-spacing: 0.03em;
+}
+
+.faq__list {
+  @include reset-list;
+  width: 970px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  // padding-top: 24px;
+  padding-bottom: 33px;
+}
+
+.faq__item h3 {
+  @include reset;
+}
+
+.faq__answer {
+  padding-left: 50px;
+}
+
+.faq__answer p {
+  @include reset;
+  width: 520px;
+  padding-bottom: 10px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.faq__question button {
+  padding-top: 43px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 65px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+
+  &::before {
+    top: 48px;
+    right: 50px;
+  }
+}
+
+.faq__question br {
+  display: none;
+}
+
+
+@media (max-width: $desktop-width) {
+  .faq {
+    padding-top: 69px;
+  }
+
+  .faq h2 {
+    margin-bottom: 51px;
+  }
+
+  .faq__list {
+    width: auto;
+  }
+
+  .faq__item {
+    padding-top: 1px;
+    padding-bottom: 16px;
+  }
+
+  .faq__answer {
+    padding-left: 50px;
+  }
+
+  .faq__answer p {
+    @include reset;
+    width: 530px;
+    padding-bottom: 28px;
+  }
+
+  .faq__question button {
+    padding: 39px 100px 30px 50px;
+
+    &::before {
+      width: 23px;
+      height: 12px;
+      top: 45px;
+      right: 48px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .faq {
+    padding-top: 61px;
+  }
+
+  .faq h2 {
+    margin-bottom: 29px;
+  }
+
+  .faq__item {
+    padding-top: 0;
+    padding-bottom: 3px;
+  }
+
+  .faq__answer {
+    padding-left: 25px;
+  }
+
+  .faq__answer p {
+    @include reset;
+    width: auto;
+    padding-top: 0;
+    padding-right: 56px;
+    padding-bottom: 19px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .faq__question button {
+    padding-top: 17px;
+    padding-bottom: 16px;
+    padding-left: 25px;
+    padding-right: 50px;
+    font-size: 16px;
+    line-height: 140%;
+
+
+    &::before {
+      top: 21px;
+      right: 21px;
+    }
+  }
+
+  .faq__question br {
+    display: inline;
+  }
+}

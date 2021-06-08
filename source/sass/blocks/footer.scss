@@ -1,0 +1,261 @@
+.footer {
+  padding: 91px 0;
+  color: $white;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  background-color: $black;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.footer__subscribe {
+  margin-right: 20px;
+  flex-basis: 500px;
+  flex-shrink: 0;
+}
+
+.footer__subscribe h2 {
+  @include reset;
+  margin-bottom: 11px;
+  font-family: $font-family-accent;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+}
+
+.footer__subscribe p {
+  @include reset;
+  margin-bottom: 30px;
+  color: $grey;
+}
+
+.footer__form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $white;
+}
+
+.footer__form input {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:hover {
+    outline: 2px solid $accent-color;
+  }
+
+  &:focus {
+    background-color: $white;
+    outline: 2px solid $accent-color;
+  }
+}
+
+.footer__button {
+  padding: 0 0 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 110px;
+  flex-shrink: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footer__links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 580px;
+}
+
+.footer__navigation {
+  display: flex;
+  flex-basis: 360px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  flex-shrink: 1;
+}
+
+.footer__navigation-list {
+  @include reset-list;
+}
+
+.footer__navigation-item a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+
+.footer__socials-list {
+  @include reset-list;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__socials-link {
+  display: grid;
+  grid-template-columns: 15px max-content;
+  align-items: center;
+  column-gap: 15px;
+  padding: 10px 0;
+}
+
+.footer__socials-link svg {
+  justify-self: center;
+}
+
+.footer__socials-icon {
+  fill: $white;
+
+  &--facebook {
+    width: 8px;
+    height: 15px;
+  }
+
+  &--instagram {
+    width: 15px;
+    height: 15px;
+  }
+
+  &--pinterest {
+    width: 15px;
+    height: 15px;
+  }
+
+  &--twitter {
+    width: 15px;
+    height: 13px;
+  }
+}
+
+.footer__button-icon {
+  stroke: $white;
+}
+
+@media (max-width: $desktop-width) {
+  .footer {
+    padding: 49px 0;
+  }
+
+  .footer__wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footer__subscribe {
+    flex-basis: 560px;
+    margin-bottom: 36px;
+  }
+
+  .footer__subscribe p {
+    margin-bottom: 32px;
+  }
+
+  .footer__links-wrapper {
+    width: 572px;
+  }
+
+  .footer__navigation {
+    flex-basis: 372px;
+  }
+
+  .footer__navigation-item a {
+    padding: 11px 0;
+  }
+
+  .footer__socials-link {
+    padding: 11px 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer__subscribe {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 35px;
+  }
+
+  .footer__subscribe h2 {
+    margin-bottom: 16px;
+    padding-right: 50px;
+  }
+
+  .footer__links-wrapper {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 23px;
+  }
+
+  .footer__navigation {
+    width: 100%;
+    flex-basis: auto;
+    max-width: 560px;
+    display: block;
+  }
+
+  .footer__navigation-list + .footer__navigation-list {
+    margin-top: 21px;
+  }
+
+  .footer__form input {
+    border-radius: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+
+  .footer__socials-list {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .footer__socials-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .footer__socials-link span {
+    display: none;
+  }
+
+  .footer__subscribe p {
+    padding-right: 40px;
+  }
+
+  .footer__socials-icon {
+    width: auto;
+    height: auto;
+  }
+
+  .footer__socials-link {
+    grid-template-columns: 9px max-content;
+    column-gap: 30px;
+  }
+}

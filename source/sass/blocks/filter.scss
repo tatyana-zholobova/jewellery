@@ -1,0 +1,416 @@
+
+.filter__button-wrapper {
+  padding-top: 34px;
+}
+
+.filter__fieldset {
+  @include reset;
+  border: none;
+}
+
+.filter__options-list {
+  @include reset-list;
+  padding-left: 34px;
+  padding-bottom: 26px;
+}
+
+.filter__legend {
+  @include reset;
+  display: block;
+  width: 100%;
+}
+
+.filter__legend button {
+  display: block;
+  width: 100%;
+  padding: 23px 45px 25px 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  &::before {
+    top: 28px;
+    right: 23px;
+  }
+}
+
+.filter__checkbox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.filter__checkbox label {
+  position: relative;
+  padding-left: 25px;
+  min-height: 15px;
+
+  &::before {
+    @include pseudo;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid $accent-color;
+  }
+}
+
+.filter__checkbox input:checked + label {
+  &::before {
+    background-color: $accent-color;
+  }
+}
+
+.filter__checkbox input:focus + label {
+  &::before {
+    outline: 1px dotted black;
+    outline-offset: 2px;
+  }
+}
+
+.filter__button {
+  display: none;
+}
+
+.filter__range-filter {
+  padding-bottom: 18px;
+}
+
+.filter__scale {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 11px;
+  background-color: #f0eae4;
+}
+
+.filter__bar {
+  @include pseudo;
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  left: 45px;
+  top: 0;
+  background-color: $accent-color;
+}
+
+.filter__bar button {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  padding: 0;
+  border-radius: 50%;
+  top: -7px;
+  background-color: $accent-color;
+
+  &::before {
+    background-image: none;
+  }
+}
+
+.filter__toggle {
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
+.filter__range-controls {
+  padding-right: 23px;
+  padding-left: 25px;
+}
+
+.filter__price-controls {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 23px;
+  padding-left: 25px;
+}
+
+.filter__price-input {
+  position: relative;
+  padding-left: 10px;
+  width: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  &::before {
+    position: absolute;
+    content: "$";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &--min {
+    margin-left: 38px;
+  }
+
+  &--max {
+    margin-right: 9px;
+  }
+}
+
+.filter__price-input input {
+  padding: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  border: none;
+  border-radius: 0;
+}
+
+.filter__button + .filter__button {
+  margin-bottom: 25px;
+}
+
+.filter__apply {
+  margin-bottom: 25px;
+}
+
+.filter__close {
+  display: none;
+}
+
+@media (max-width: $desktop-width) {
+  .filter__button {
+    display: block;
+  }
+
+  .filter__inner {
+    height: calc(100vh - 27px);
+    overflow: auto;
+  }
+
+  .filter__wrapper {
+    position: fixed;
+    z-index: 10;
+    width: 442px;
+    top: 27px;
+    left: -19px;
+    background-color: $white;
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+    &--open {
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .filter__item {
+    border: none;
+    border-bottom: 1px solid $accent-color;
+  }
+
+  .filter__button-wrapper {
+    padding: 40px;
+  }
+
+  .filter__legend button {
+    padding: 34px 65px 23px 40px;
+    font-size: 18px;
+
+    &::before {
+      top: 40px;
+      right: 41px;
+    }
+  }
+
+  .filter__close {
+    position: absolute;
+    display: block;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    top: -15px;
+    right: -15px;
+    background-color: $dark;
+    border-radius: 50%;
+    border: none;
+
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 2px;
+      top: 14px;
+      left: 6px;
+      transform: rotate(45deg);
+      background-color: $white;
+    }
+
+    &::after {
+      @include pseudo;
+      width: 20px;
+      height: 2px;
+      top: 14px;
+      right: 6px;
+      transform: rotate(-45deg);
+      background-color: $white;
+    }
+  }
+
+  .filter__range-controls {
+    padding-right: 88px;
+    padding-left: 50px;
+  }
+
+  .filter__price-input {
+    border-radius: 0;
+
+    &--min {
+      margin-left: 64px;
+    }
+
+    &--max {
+      margin-right: 107px;
+    }
+
+    &::before {
+      font-size: 16px;
+    }
+  }
+
+  .filter__options-list {
+    padding-bottom: 28px;
+    padding-left: 50px;
+  }
+
+  .filter__checkbox {
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  .filter__checkbox label {
+    padding-left: 30px;
+
+    &::before {
+      @include pseudo;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .filter__fieldset {
+    padding-bottom: 11px;
+  }
+
+  .filter__bar button {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter__range-filter {
+    padding-top: 7px;
+  }
+
+  .filter__toggle--max {
+    right: -12px;
+  }
+
+  .filter__price-input input {
+    font-size: 16px;
+  }
+
+  .filter__scale {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .filter__wrapper {
+    width: calc(100vw - 40px);
+    max-width: 450px;
+    left: 0;
+    right: 0;
+    top: 75px;
+    margin: auto;
+    transform: translateX(-140%);
+
+    &--open {
+      transform: translateX(0);
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .filter__inner {
+    height: calc(100vh - 140px);
+  }
+
+  .filter__legend button {
+    padding: 24px 65px 15px 26px;
+
+    &::before {
+      top: 32px;
+      right: 24px;
+    }
+  }
+
+  .filter__options-list {
+    padding-bottom: 16px;
+    padding-left: 35px;
+    padding-top: 7px;
+  }
+
+  .filter__range-filter {
+    padding-top: 15px;
+    padding-bottom: 9px;
+  }
+
+  .filter__scale {
+    padding-left: 10px;
+    width: 250px;
+  }
+
+  .filter__toggle--max {
+    right: 0;
+  }
+
+  .filter__price-input--min {
+    margin-left: 38px;
+  }
+
+  .filter__price-input--max {
+    margin-right: 28px;
+  }
+
+  .filter__button-wrapper {
+    padding: 30px 25px;
+  }
+
+  .filter__close {
+    right: -5px;
+  }
+
+  .filter__bar button {
+    top: -8px;
+  }
+
+  .filter__price-controls,
+  .filter__range-controls {
+    width: 250px;
+    padding-left: 10px;
+  }
+
+  .filter__apply {
+    margin-bottom: 20px;
+  }
+}

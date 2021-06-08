@@ -1,0 +1,22 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.link--footer:hover svg,
+.link--footer:focus svg {
+  stroke: $accent-color;
+}
+
+.link--footer:hover svg {
+  fill: $accent-color;
+}

@@ -1,0 +1,44 @@
+.section h2 {
+  @include reset;
+  margin-bottom: 18px;
+  font-family: $font-family-accent;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.section__link-box {
+  @include flex-center;
+}
+
+
+.section__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: inherit;
+  text-decoration: none;
+
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 1px;
+    background-color: $accent-color;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .section {
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

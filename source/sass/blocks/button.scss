@@ -1,0 +1,40 @@
+.button {
+  @include flex-center;
+  width: 100%;
+  min-height: 68px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  cursor: pointer;
+  border: 1px solid $accent-color;
+  text-decoration: none;
+
+  &--dark {
+    background-color: $accent-color;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $dark;
+    }
+  }
+
+  &--light {
+    background-color: $white;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+      color: $white;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

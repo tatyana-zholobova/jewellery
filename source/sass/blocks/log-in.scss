@@ -1,0 +1,138 @@
+.log-in {
+  width: 430px;
+  margin: 0 auto;
+  padding-top: 138px;
+  background-image: url("../img/sweet-ice-cream.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/sweet-ice-cream@2x.jpg");
+  }
+}
+
+.log-in h2 {
+  @include reset;
+  margin-bottom: 23px;
+  font-family: $font-family-accent;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.log-in__form__wrapper {
+  padding: 54px 45px;
+  background-color: $beige;
+}
+
+.log-in__input {
+  border-bottom: 1px solid $dark;
+}
+
+.log-in__input + .log-in__input {
+  margin-top: 25px;
+}
+
+.log-in__input input {
+  width: 100%;
+  padding: 9px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    outline: 2px solid $accent-color;
+  }
+}
+
+.log-in__text {
+  @include reset;
+  margin-top: 7px;
+  margin-bottom: 43px;
+  color: $grey;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+}
+
+.log-in__button {
+  margin-bottom: 18px;
+}
+
+.log-in__sign-up {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey;
+  text-align: center;
+}
+
+.log-in__sign-up a {
+  color: $dark;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .log-in {
+    width: 442px;
+  }
+
+  .log-in__form__wrapper {
+    padding: 50px 50px;
+  }
+
+  .log-in h2 {
+    margin-bottom: 21px;
+  }
+
+  .log-in__button {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .log-in {
+    padding-top: 84px;
+    width: 270px;
+  }
+
+  .log-in__form__wrapper {
+    padding: 35px 15px;
+    padding-bottom: 38px;
+  }
+
+  .log-in h2 {
+    margin-bottom: 18px;
+    font-family: $font-family-accent;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .log-in__input + .log-in__input {
+    margin-top: 19px;
+  }
+
+  .log-in__text {
+    margin: 7px 0 32px;
+  }
+}

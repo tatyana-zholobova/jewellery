@@ -1,0 +1,24 @@
+@media (max-width: $desktop-width) {
+  .new {
+    padding-top: 68px;
+  }
+
+  .new__box-link {
+    margin-bottom: 50px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .new {
+    padding-top: 61px;
+  }
+
+  .new h2 {
+    margin-bottom: 14px;
+  }
+
+  .new__box-link {
+    margin-bottom: 40px;
+  }
+}

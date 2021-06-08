@@ -1,0 +1,45 @@
+.pagination__list {
+  @include reset-list;
+  display: flex;
+}
+
+.pagination__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.pagination span,
+.pagination a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+}
+
+.pagination__link--prev[href],
+.pagination__link--next[href] {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .pagination__link {
+    &--prev,
+    &--next {
+      display: none;
+    }
+  }
+
+  .pagination__item:not(:last-child) {
+    margin-right: 23px;
+  }
+}

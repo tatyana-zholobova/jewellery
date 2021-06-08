@@ -1,0 +1,66 @@
+.accordion__item {
+  border-top: 1px solid $accent-color;
+  border-right: 1px solid $accent-color;
+  border-left: 1px solid $accent-color;
+
+  &:last-child {
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.accordion__item button {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+    width: 16px;
+    height: 9px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+  }
+}
+
+.accordion__item .accordion__content {
+  display: none;
+}
+
+.accordion__item--active .accordion__content {
+  display: block;
+}
+
+.accordion__item--active button {
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
+.no-js .accordion__content {
+  display: block;
+}
+
+.no-js button {
+  &::before {
+    display: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .accordion__item button {
+    &::before {
+      width: 23px;
+      height: 12px;
+    }
+  }
+}

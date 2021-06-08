@@ -1,0 +1,117 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.catalog__wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto min-content;
+  column-gap: 50px;
+}
+
+.catalog__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% * 270 / 870));
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: calc(100% * 30 / 870);
+  row-gap: 17px;
+}
+
+.catalog__image {
+  height: 272px;
+}
+
+.catalog__pagination {
+  grid-column: 2/3;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 53px;
+  padding-bottom: 53px;
+}
+
+.catalog__pagination-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.catalog__pagination-link {
+  color: $grey;
+
+  &--current {
+    color: $dark;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .catalog {
+    padding-top: 51px;
+    padding-bottom: 78px;
+  }
+
+  .catalog__wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 50px;
+  }
+
+  .catalog__pagination {
+    grid-column: 1/-1;
+    padding: 0;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(3, calc(100% * 206 / 678));
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: calc(100% * 30 / 678);
+  }
+
+  .catalog__image {
+    height: 207px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .catalog {
+    padding-top: 40px;
+    padding-bottom: 69px;
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .catalog__wrapper {
+    grid-template-rows: repeat(2, auto);
+    row-gap: 40px;
+    max-width: 500px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(2, calc(100% * 130 / 290));
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: calc(100% * 30 / 290);
+    row-gap: 7px;
+  }
+
+  .catalog__image {
+    height: 136px;
+  }
+
+  .catalog__pagination {
+    margin-top: -10px;
+  }
+}

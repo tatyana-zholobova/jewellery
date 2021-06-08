@@ -1,0 +1,41 @@
+.gallery {
+  padding-top: 120px;
+}
+
+.gallery__box-link {
+  margin-bottom: 58px;
+}
+
+.gallery__list {
+  @include reset-list;
+  margin-bottom: 31px;
+}
+
+
+@media (max-width: $desktop-width) {
+  .gallery {
+    padding-top: 59px;
+  }
+
+  .gallery__list {
+    margin-bottom: 20px;
+  }
+
+  .gallery__box-link {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .gallery {
+    padding-top: 45px;
+  }
+
+  .gallery__item {
+    margin-bottom: 20px;
+  }
+
+  .gallery__box-link {
+    margin-bottom: 38px;
+  }
+}

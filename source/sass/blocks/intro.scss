@@ -1,0 +1,99 @@
+.intro {
+  @include flex-center;
+  box-sizing: border-box;
+  padding: 20px 0;
+  color: $white;
+  background-color: $accent-color;
+
+  &--big {
+    min-height: 463px;
+    background-image: url("../img/intro-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-desktop@2x.jpg");
+    }
+  }
+
+  &--small {
+    min-height: 261px;
+    background-image: url("../img/intro-catalog-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-catalog-desktop@2x.jpg");
+    }
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro p {
+  @include reset;
+  font-family: $font-family-accent;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+
+  &:first-child {
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+}
+
+.intro--big p {
+  font-size: 38px;
+
+  &:first-child {
+    font-size: 45px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.intro--small p {
+  font-size: 22px;
+
+  &:first-child {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .intro--big {
+    padding-right: 20px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .intro {
+    padding-right: 0;
+    padding-top: 16px;
+  }
+
+  .intro--big p {
+    font-size: 34px;
+
+    &:first-child {
+      font-size: 38px;
+    }
+  }
+
+  .intro p {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
