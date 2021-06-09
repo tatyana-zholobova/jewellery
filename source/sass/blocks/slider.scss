@@ -18,12 +18,12 @@
   cursor: pointer;
 
   &--prev {
-    left: 0;
+    left: 6px;
     transform: rotate(180deg);
   }
 
   &--next {
-    right: 0;
+    right: 6px;
   }
 }
 

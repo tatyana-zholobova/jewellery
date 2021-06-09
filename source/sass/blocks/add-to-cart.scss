@@ -137,7 +137,10 @@
 
 .add-to-cart__link__wrapper {
   display: flex;
-  gap: 30px;
+}
+
+.add-to-cart__continue {
+  margin-right: 30px;
 }
 
 .add-to-cart__link__wrapper a {
@@ -160,14 +163,10 @@
   }
 }
 
-
 @media (max-width: $tablet-width) {
   .add-to-cart {
     width: 290px;
     padding: 36px 15px 30px;
-  }
-
-  section.add-to-cart {
     position: absolute;
     top: 117px;
     right: 15px;
@@ -229,7 +228,12 @@
   .add-to-cart__link__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .add-to-cart__continue {
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .add-to-cart__close {
