@@ -240,12 +240,6 @@
     fill: transparent;
   }
 
-  // .header__cart:hover .header__cart-icon,
-  // .header__cart:focus .header__cart-icon {
-  //   stroke: $accent-color;
-  //   fill: transparent;
-  // }
-
   .header__cart span {
     display: none;
   }
@@ -276,7 +270,7 @@
     z-index: 10;
     width: 100%;
     height: calc(100vh - 166px);
-    top: 126px;
+    top: 125px;
     left: 0;
     padding-bottom: 45px;
     padding-top: 11px;
@@ -287,6 +281,7 @@
 
   .no-js .header__navigation {
     display: block;
+    padding-bottom: 45px;
   }
 
   .header__navigation-list {

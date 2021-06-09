@@ -10,20 +10,20 @@
   position: absolute;
   z-index: 100;
   padding: 0;
-  top: -115px;
-  width: 30px;
-  height: 30px;
+  top: -118px;
+  width: 36px;
+  height: 36px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 
   &--prev {
-    left: 6px;
+    left: 0;
     transform: rotate(180deg);
   }
 
   &--next {
-    right: 6px;
+    right: 0;
   }
 }
 
@@ -68,6 +68,10 @@ span.slider__bullet {
 
 .slider__image {
   height: 284px;
+}
+
+.no-js .slider__button {
+  display: none;
 }
 
 @media (max-width: $desktop-width) {
