@@ -67,7 +67,12 @@ span.slider__bullet {
 }
 
 .slider__image {
-  height: 284px;
+  height: auto;
+  max-width: 100%;
+}
+
+.slider__image img {
+  aspect-ratio: 270/284;
 }
 
 .no-js .slider__button {
@@ -75,10 +80,6 @@ span.slider__bullet {
 }
 
 @media (max-width: $desktop-width) {
-  .slider__image {
-    height: 340px;
-  }
-
   .slider__button {
     width: 36px;
     height: 36px;
@@ -90,6 +91,10 @@ span.slider__bullet {
       margin-right: 13px;
     }
   }
+
+  .slider__image img {
+    aspect-ratio: 324/340;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -97,11 +102,11 @@ span.slider__bullet {
     display: none;
   }
 
-  .slider__image {
-    height: 136px;
-  }
-
   .slider__pagination {
     margin-top: -8px;
+  }
+
+  .slider__image img {
+    aspect-ratio: 130/136;
   }
 }

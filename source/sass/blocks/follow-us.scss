@@ -1,6 +1,6 @@
 .follow-us {
   padding-top: 110px;
-  padding-bottom: 128px;
+  padding-bottom: 130px;
 }
 
 .follow-us h2 {
@@ -17,11 +17,10 @@
   @include reset-list;
   display: grid;
   grid-template-columns: calc(100% * 230 / 1170) calc(100% * 399 / 1170) calc(100% * 230 / 1170) calc(100% * 230 / 1170);
-  grid-template-rows: 230px 150px;
+  grid-template-rows: calc(100% * 230 / 412) calc(100% * 150 / 412);
   column-gap: calc(100% * 27 / 1170);
   row-gap: 34px;
 }
-
 
 .follow-us__item {
   &--large {
@@ -41,11 +40,10 @@
 @media (max-width: $desktop-width) {
   .follow-us {
     padding-top: 77px;
-    padding-bottom: 81px;
+    padding-bottom: 80px;
   }
 
   .follow-us__list {
-    grid-template-rows: 133px 87px;
     row-gap: 20px;
   }
 
@@ -57,7 +55,7 @@
 @media (max-width: $tablet-width) {
   .follow-us {
     padding-top: 62px;
-    padding-bottom: 71px;
+    padding-bottom: 72px;
   }
 
   .follow-us__link-box {
@@ -69,7 +67,7 @@
     max-width: 550px;
     margin: 0 auto;
     grid-template-columns: calc(100% * 133 / 290) calc(100% * 133 / 290);
-    grid-template-rows: 133px 87px 87px;
+    grid-template-rows: calc(100% * 133 / 361) calc(100% * 87 / 361) calc(100% * 87 / 361);
     column-gap: calc(100% * 24 / 290);
     row-gap: 27px;
   }

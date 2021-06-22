@@ -9,8 +9,8 @@
   @include reset-list;
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: repeat(3, 125px);
+  grid-template-columns: calc(100% * 100 / 600)  calc(100% * 470 / 600);
+  grid-template-rows: repeat(3, calc(100% * 125 / 435));
   gap: 30px;
   padding-top: 10px;
 }
@@ -73,10 +73,8 @@
 
   .product__image-gallery {
     padding-top: 0;
-    margin-bottom: 27px;
-    grid-template-columns: 100%;
-    grid-template-rows: 260px min-content;
-    row-gap: 12px;
+    margin-bottom: 39px;
+    display: block;
   }
 
   .product__image-item {
@@ -84,6 +82,7 @@
 
     &--active {
       display: block;
+      aspect-ratio: 290/260;
     }
   }
 
@@ -94,7 +93,7 @@
   .product__pagination {
     display: block;
     position: absolute;
-    bottom: 17px;
+    bottom: 7px;
     left: 50%;
     transform: translateX(-50%);
     font-weight: 500;

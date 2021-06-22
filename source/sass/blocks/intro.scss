@@ -72,6 +72,18 @@
   .intro--big {
     padding-right: 20px;
   }
+
+  .intro p {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .intro--big p {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -81,19 +93,20 @@
     padding-top: 16px;
   }
 
-  .intro--big p {
-    font-size: 34px;
-
-    &:first-child {
-      font-size: 38px;
-    }
-  }
-
   .intro p {
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .intro--big p {
+    font-size: 34px;
+    margin-bottom: -3px;
+
+    &:first-child {
+      font-size: 38px;
     }
   }
 }

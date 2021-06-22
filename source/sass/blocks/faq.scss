@@ -9,12 +9,11 @@
 
 .faq__list {
   @include reset-list;
-  width: 970px;
+  max-width: 970px;
   margin: 0 auto;
 }
 
 .faq__item {
-  // padding-top: 24px;
   padding-bottom: 33px;
 }
 

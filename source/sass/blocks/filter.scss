@@ -48,6 +48,7 @@
   position: relative;
   padding-left: 25px;
   min-height: 15px;
+  cursor: pointer;
 
   &::before {
     @include pseudo;
